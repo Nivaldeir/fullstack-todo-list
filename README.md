@@ -72,13 +72,12 @@ npm run start
 
 #### exibir a previsão do tempo
 ```http
-  GET /weather-forecast?
+  GET /weather-forecast?lat={lat}&long={long}
 ```
 | Query   | Tipo       |
 | :---------- | :--------- 
-| `city` | `string` |  
-| `state` | `string` | 
-| `country` | `string` | 
+| `lat` | `string` |  
+| `long` | `string` | 
 
 ## ✒️ Authors
 
