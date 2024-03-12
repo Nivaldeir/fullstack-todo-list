@@ -16,10 +16,6 @@ npm run start
 
 ### 🔧 Instalação para backend
 
-Arquivo .env api utilizado do site Weather Bit
-```bash
-API_KEY_WEATHERBIT=""
-```
 Iniciando:
 ```bash
 cd backend
