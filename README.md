@@ -69,6 +69,15 @@ npm run start
 ```http
   POST /auto-form
 ```
+| Bdy   | Tipo       |
+| :---------- | :--------- 
+| `roleinCompanny` | `string` |  
+| `lastName` | `string` |
+| `firstName` | `string` |  
+| `address` | `string` | 
+| `companyName` | `string` |  
+| `phoneNumber` | `string` |
+| `email` | `string` | 
 
 #### exibir a previsão do tempo
 ```http
