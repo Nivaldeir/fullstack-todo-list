@@ -5,19 +5,14 @@ import { Injectable } from '@nestjs/common';
 export class WeatherForecastService {
   constructor(private httpService: HttpService) { }
   async get(input: Input) {
-    const url = `https://api.weatherbit.io/v2.0/current?city=${input.city}&state=${input.state}&country=${input.country}&key=${process.env.API_KEY_WEATHERBIT}&lang=pt`;
+    const url = `https://api.open-meteo.com/v1/forecast?latitude=${input.latitude}&longitude=${input.longitude}&current=temperature_2m,wind_speed_10m&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m`;
     const response = await this.httpService.get(url).toPromise() as any
     const output = response.data
-    return {
-      temp: output.data[0].app_temp,
-      city: output.data[0].city_name,
-      where: output.data[0].weather.description
-    }
+    return output
   }
 }
 
 type Input = {
-  city: string
-  state: string
-  country: string
+  latitude:string,
+  longitude:string,
 }

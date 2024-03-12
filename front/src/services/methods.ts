@@ -26,3 +26,8 @@ export const createList = async (title: string) => {
     title: title,
   });
 };
+
+export const getClimate = async (lat: number, long: number) => {
+  const response = await http.get(`/weather-forecast?lat=${lat}&long=${long}`);
+  return await response;
+};

@@ -6,14 +6,12 @@ export class WeatherForecastController {
   constructor(private readonly weatherService: WeatherForecastService) { }
   @Get()
   get(
-    @Query('city') city: string,
-    @Query('state') state: string,
-    @Query('country') country: string,
+    @Query('lat') latitude: string,
+    @Query('long') longitude: string,
   ) {
     return this.weatherService.get({
-      city,
-      country,
-      state
+      latitude,
+      longitude,
     });
   }
 }

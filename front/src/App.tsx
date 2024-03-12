@@ -4,6 +4,7 @@ import Header from "./components/header";
 import { useEffect, useState } from "react";
 import { getAllList } from "./services/methods";
 import { InputHeader } from "./components/Input-header";
+import Climatic from "./components/climatic";
 
 function App() {
   const [data, setData] = useState<ITodoListProps[]>([]);
@@ -18,6 +19,7 @@ function App() {
   }, [newTask]);
   return (
     <div className="bg-[#454545]">
+      <Climatic />
       <Header />
       <InputHeader newFunctionTasks={setNewTask} />
       <main className=" w-full h-full">
